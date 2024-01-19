@@ -10,6 +10,7 @@ struct datosmedicina
 {
     char nombre[20];
     char precio[20];
+    char cantidad[20];
 }fardat;
 
 void crear()
@@ -29,12 +30,16 @@ void crear()
         fflush(stdin);
         printf("\nNombre: "); scanf("%s",fardat.nombre);
         printf("\nPrecio: "); scanf("%s",fardat.precio);
+        printf("\nCantidad: "); scanf("%s",fardat.cantidad);
 
         fprintf(farmacia,"\n\nNombre : ");
         fwrite(fardat.nombre,1,strlen(fardat.nombre),farmacia);
 
         fprintf(farmacia,"\nPrecio : ");
         fwrite(fardat.precio,1,strlen(fardat.precio),farmacia);
+        
+        fprintf(farmacia,"\nCantidad : ");
+        fwrite(fardat.cantidad,1,strlen(fardat.cantidad),farmacia);
         
         printf("Desea agregar mas medicinas (s) : ");
         scanf("%c",&rpt);
@@ -57,12 +62,16 @@ void agregar()
         fflush(stdin);
         printf("\nNombre: "); scanf("%s",fardat.nombre);
         printf("\nPrecio: "); scanf("%s",fardat.precio);
+        printf("\nCantidad: "); scanf("%s",fardat.cantidad);
 
         fprintf(farmacia,"\n\nNombre : ");
         fwrite(fardat.nombre,1,strlen(fardat.nombre),farmacia);
 
         fprintf(farmacia,"\nPrecio : ");
         fwrite(fardat.precio,1,strlen(fardat.precio),farmacia);
+
+        fprintf(farmacia,"\nCantidad : ");
+        fwrite(fardat.cantidad,1,strlen(fardat.cantidad),farmacia);
 
         printf("Desea agregar mas medicinas (s) : ");
         scanf("%c",&rpt);
