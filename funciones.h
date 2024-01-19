@@ -6,7 +6,7 @@
 #include <string.h>
 FILE *farmacia;
 
-struct datosPersonales
+struct datosmedicina
 {
     char nombre[20];
     char precio[20];
